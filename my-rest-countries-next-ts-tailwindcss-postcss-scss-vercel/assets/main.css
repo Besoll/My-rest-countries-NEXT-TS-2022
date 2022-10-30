@@ -1,0 +1,15 @@
+@import "./base.css" @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply p-0 m-0 box-border;
+}
+
+body {
+  @apply justify-between px-4;
+}
+
+img {
+  @apply w-full h-auto rounded-sm;
+}
