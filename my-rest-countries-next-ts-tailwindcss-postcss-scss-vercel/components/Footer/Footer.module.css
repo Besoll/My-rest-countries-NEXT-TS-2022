@@ -1,5 +1,5 @@
 .root {
-  @apply bg-primaryLight dark:bg-secondaryLight 
-            text-primary dark:text-secondary 
-            w-full h-10;
+  @apply bg-Blue_Light dark:bg-Grey 
+          text-White dark:text-Blue_Dark 
+          w-full h-10;
 }

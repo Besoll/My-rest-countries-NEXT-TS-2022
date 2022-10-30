@@ -1,7 +1,34 @@
 :root {
-  --primary: " hsl(209, 23%, 22%)"; /* dark-blue */
-  --primaryDark: "hsl(207, 26%, 17%)"; /* very-dark-blue */
-  --primaryLight: "hsl(200, 15%, 8%)"; /* very-dark-blue-light */
-  --secondary: " hsl(0, 0%, 52%)"; /* dark-gray */
-  --secondaryLight: "hsl(0, 0%, 98%)"; /* very-light-gray */
+  /* font family */
+  --font-sans: 'Nunito Sans', sans-serif;
+  --font-w-normal: 300;
+  --font-w-bold: 600;
+  --font-w-bolder: 800;
+
+  /* font-size */
+  --text-sm: 14px;
+  --text-md: 16px;
+  --text-xl: 16px;
+
+  /* bg color */
+  --Light-Blue: hsl(209, 23%, 22%);
+  --Dark-Blue: hsl(207, 26%, 17%);
+  --Dark-Grey: hsl(0, 0%, 52%);
+  --White98: hsl(0, 0%, 98%);
+  --White100: hsl(0, 0%, 100%);
+
+  /* text color */
+
+  /* Screens @media (min-width: 640px) { ... } */
+  --sm: 640px;
+  --md: 768px;
+  --lg: 1024px;
+  --xl: 1280px;
+  --2xl: 1536px;
+
+  --primary: hsl(209, 23%, 22%); /* dark-blue */
+  --primaryDark: hsl(207, 26%, 17%); /* very-dark-blue */
+  --primaryLight: hsl(200, 15%, 8%); /* very-dark-blue-light */
+  --secondary: hsl(0, 0%, 52%); /* dark-gray */
+  --secondaryLight: hsl(0, 0%, 98%); /* very-light-gray */
 }
