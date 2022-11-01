@@ -20,9 +20,13 @@
     ]
   },
   "dependencies": {
+    "@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
     "next": "13.0.0",
+    "postcss-loader": "^7.0.1",
+    "postcss-nesting": "^10.2.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "sass": "^1.55.0"
   },
   "devDependencies": {
     "@types/node": "18.11.7",

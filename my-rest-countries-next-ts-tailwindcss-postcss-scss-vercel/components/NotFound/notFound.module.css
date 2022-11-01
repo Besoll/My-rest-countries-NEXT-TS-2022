@@ -1,0 +1,10 @@
+.root {
+    @apply flex flex-col items-center 
+     fill-Blue_Dark text-White bg-Blue_Dark;
+}
+
+
+.svgContainer {
+    @apply  animate-spin;
+}
+  

@@ -9,7 +9,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        fontFamily: 'var(--font-sans)',
+        Nunito: 'var(--font-sans)',
       },
       fontWeight: {
         Normal: 'var(--font-w-normal)',
@@ -29,14 +29,13 @@ module.exports = {
         White: 'var(--White100)',
       },
       textColor: {
-        Dark: 'var(--Light-Mode-Text)',
-        Light: 'var(--Dark-Mode-Text)',
       },
       screens: {
+        'xs': '375px',
         'sm': '640px',
         'md': '768px',
         'lg': '1024px',
-        'xl': '1280px',
+        'xl': '1440px',
         '2xl': '1536px',
       },
     },

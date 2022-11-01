@@ -1,4 +1,4 @@
-import s from "./Filter.module.css";
+import s from "./filter.module.css";
 
 const Filter = () => {
   return (
