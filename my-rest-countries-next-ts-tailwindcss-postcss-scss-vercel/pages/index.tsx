@@ -1,17 +1,13 @@
-import { Header, Filter, Footer, Countries } from "@components/index"
-
-
+import { Header, Footer, Main } from "@components/index";
 
 const Home = () => {
   return (
-    <>
+    <div>
       <Header />
-      <Filter />
-      <Countries />
+      <Main />
       <Footer />
-    </>
-  )
-}
+    </div>
+  );
+};
 
-export default Home
-
+export default Home;
