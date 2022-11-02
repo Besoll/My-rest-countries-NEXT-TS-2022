@@ -1,3 +1,8 @@
+.containerTop {
+  @apply flex items-center justify-between 
+          flex-wrap gap-4 lg:gap-1 mx-0 my-6 p-4;
+}
+
 .main {
   @apply flex flex-col items-center justify-center my-12
             mx-auto max-w-[1400px] 2xl:max-w-[1600px];
@@ -19,5 +24,9 @@
 }
 
 .loaded {
-  @apply bg-white dark:bg-Blue_Dark;
+  @apply bg-White;
+}
+
+:global(.dark) .loaded {
+  @apply bg-Blue_Dark;
 }

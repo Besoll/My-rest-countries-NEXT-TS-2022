@@ -19,9 +19,9 @@ const Main = () => {
 
   return (
     <>
-      <div>
+      <div className={s.containerTop}>
         <Search
-          icon={SearchIcon}
+          icon={<SearchIcon />}
           placeholder="Search for a country..."
           setCountries={setCountries}
           setLoading={setLoading}

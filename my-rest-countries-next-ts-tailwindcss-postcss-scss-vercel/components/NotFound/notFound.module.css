@@ -1,10 +1,14 @@
 .root {
     @apply flex flex-col items-center 
-     fill-Blue_Dark text-White bg-Blue_Dark;
+     fill-White_Soft text-Blue_Dark bg-White;
 }
 
 
 .svgContainer {
     @apply  animate-spin;
+}
+
+:global(.dark) .root {
+    @apply fill-Blue_Light text-White bg-Blue_Dark;
 }
   

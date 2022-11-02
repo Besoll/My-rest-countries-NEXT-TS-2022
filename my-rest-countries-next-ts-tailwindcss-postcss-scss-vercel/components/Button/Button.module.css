@@ -1,0 +1,33 @@
+.primary {
+    @apply flex bg-transparent text-Blue_Light gap-2 items-center;
+  
+    && svg {
+      @apply w-5 h-5;
+    }
+  }
+  .secondary {
+    @apply flex min-w-[100px] justify-evenly 
+                bg-transparent rounded-[4px]  
+                items-center text-Blue_Light gap-2 w-auto 
+                shadow-md p-2 border-gray-100 border-[0.5px];
+  
+    &:hover {
+      @apply scale-105 transition-all duration-300 ease-in-out;
+    }
+    && svg {
+      @apply w-5 h-5;
+    }
+  }
+  
+  :global(.dark) .primary,
+  :global(.dark) .secondary {
+    @apply bg-transparent  text-White items-center border-none;
+  
+    && svg {
+      @apply fill-White;
+    }
+  }
+  
+  :global(.dark) .secondary {
+    @apply bg-Blue_Light shadow-xl;
+  }

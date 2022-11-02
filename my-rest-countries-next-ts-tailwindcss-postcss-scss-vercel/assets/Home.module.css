@@ -1,3 +1,8 @@
 .container {
-  @apply flex flex-col h-screen justify-between;
+  @apply flex flex-col h-screen justify-between bg-White;
+}
+
+
+:global(.dark) .container {
+  @apply bg-Blue_Dark;
 }

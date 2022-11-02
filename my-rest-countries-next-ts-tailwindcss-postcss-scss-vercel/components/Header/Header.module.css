@@ -1,14 +1,28 @@
 .root {
   @apply transition-all flex justify-between
-            h-20 md:p-8 mb-5 items-center p-4 shadow-md
-            dark:bg-Blue_Light;
+            h-20 md:p-8 mb-5 items-center p-4 shadow-md;
 
   && .leftSide {
-    @apply text-Blue_Dark dark:text-White font-Bold;
+    @apply text-Blue_Dark font-Bold text-Big;
   }
 
   && button {
-    @apply fill-Blue_Dark dark:fill-yellow-300;
+    @apply fill-Blue_Dark;
+    &:hover {
+      @apply animate-spin duration-700;
+    }
+  }
+}
+
+:global(.dark) .root {
+  @apply bg-Blue_Light;
+
+  && .leftSide {
+    @apply text-White;
+  }
+
+  && button {
+    @apply fill-yellow-300;
     &:hover {
       @apply animate-spin duration-700;
     }
