@@ -9,7 +9,8 @@
 }
 
 body {
-  @apply justify-between px-4 font-Nunito;
+  @apply text-White dark:text-Blue_Dark
+          font-Nunito;
 }
 
 img {

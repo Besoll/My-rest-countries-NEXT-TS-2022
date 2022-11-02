@@ -1,6 +1,8 @@
-import s from "./header.module.css";
+import s from "./Header.module.css";
 import { Button } from "@components/index"
 import { useEffect, useState } from "react";
+import { switchMode } from "utils/switchMode";
+import { Moon, Sun } from "@assets/icons";
 
 const Header = () => {
   const [ darkMode, setDarkMode ] = useState({value: false, iteration: 0})
@@ -8,6 +10,7 @@ const Header = () => {
   useEffect(() => {
     switchMode({ darkMode, setDarkMode })
   }, [])
+
   return (
     <div className={s.root}>
       <div className={s.leftSide}>

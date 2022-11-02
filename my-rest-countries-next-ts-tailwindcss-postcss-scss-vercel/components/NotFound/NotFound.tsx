@@ -1,5 +1,5 @@
 import { NotFoundIcon } from "@assets/icons"
-import s from "./notFound.module.css"
+import s from "./NotFound.module.css"
 
 
 const NotFound = ({ returnHome }: { returnHome?: boolean }) => {
