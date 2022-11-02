@@ -1,0 +1,18 @@
+.container {
+  @apply flex transition-all bg-White dark:bg-Blue_Light
+        h-14 max-w-[375px] items-center p-4 
+        shadow-sm rounded-md border dark:border-none;
+
+  /* svg {
+    @apply w-5 h-5 fill-bg-Blue_Light dark:fill-White_Soft mr-2;
+  } */
+
+  && input {
+    @apply w-full transition-all 
+            bg-White dark:bg-Blue_Light
+            text-Blue_Dark dark:text-White_Soft;
+    &::placeholder {
+      @apply text-Blue_Dark dark:text-White_Soft;
+    }
+  }
+}

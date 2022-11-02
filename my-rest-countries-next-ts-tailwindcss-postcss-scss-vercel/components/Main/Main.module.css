@@ -1,0 +1,23 @@
+.main {
+  @apply flex flex-col items-center justify-center my-12
+            mx-auto max-w-[1400px] 2xl:max-w-[1600px];
+}
+
+.container {
+  @apply grid justify-items-center justify-center gap-5
+            lg:gap-8 h-full w-full;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 270px));
+
+  && a {
+    @apply w-full;
+    display: inherit;
+  }
+}
+
+.loading {
+  @apply grid h-full items-center;
+}
+
+.loaded {
+  @apply bg-white dark:bg-Blue_Dark;
+}

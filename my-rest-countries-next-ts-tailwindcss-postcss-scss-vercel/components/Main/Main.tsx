@@ -1,8 +1,9 @@
 import s from "./Main.module.css";
-import { Loading, NotFound, Countries } from "@components/index";
+import { Loading, NotFound, Countries, Search } from "@components/index";
 import { GetCountries } from "framework/getCountries";
 import { useEffect, useState } from "react";
 import { numberWithCommas } from "utils/numberWithCommas";
+import { SearchIcon } from "@assets/icons";
 
 const Main = () => {
   const [countries, setCountries] = useState([]);
@@ -17,28 +18,40 @@ const Main = () => {
   }, []);
 
   return (
-    <main className={loading ? s.loading : s.loaded}>
-      <div className={s.main}>
-        <div className={s.container}>
-          {loading ? (
-            <Loading />
-          ) : countries === (false as any) ? (
-            <NotFound />
-          ) : (
-            countries.map((country) => (
-              <Countries
-                key={country.name.common}
-                flag={country.flags[0] || country.flags.svg}
-                name={country.name.common}
-                population={numberWithCommas(country.population)}
-                region={country.region}
-                capital={country.capital}
-              />
-            ))
-          )}
-        </div>
+    <>
+      <div>
+        <Search
+          icon={<SearchIcon />}
+          placeholder="Search for a country..."
+          setCountries={setCountries}
+          setLoading={setLoading}
+        />
+        <div></div>
       </div>
-    </main>
+
+      <main className={loading ? s.loading : s.loaded}>
+        <div className={s.main}>
+          <div className={s.container}>
+            {loading ? (
+              <Loading />
+            ) : countries === (false as any) ? (
+              <NotFound />
+            ) : (
+              countries.map((country) => (
+                <Countries
+                  key={country.name.common}
+                  flag={country.flags[0] || country.flags.svg}
+                  name={country.name.common}
+                  population={numberWithCommas(country.population)}
+                  region={country.region}
+                  capital={country.capital}
+                />
+              ))
+            )}
+          </div>
+        </div>
+      </main>
+    </>
   );
 };
 

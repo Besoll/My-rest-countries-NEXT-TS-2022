@@ -1,28 +1,29 @@
 import s from "./Header.module.css";
-import { Button } from "@components/index"
+import { Button } from "@components/index";
 import { useEffect, useState } from "react";
 import { switchMode } from "utils/switchMode";
 import { Moon, Sun } from "@assets/icons";
 
 const Header = () => {
-  const [ darkMode, setDarkMode ] = useState({value: false, iteration: 0})
+  const [darkMode, setDarkMode] = useState({ value: false, iteration: 0 });
 
   useEffect(() => {
-    switchMode({ darkMode, setDarkMode })
-  }, [])
+    switchMode({ darkMode, setDarkMode });
+  }, []);
 
   return (
-    <div className={s.root}>
+    <header className={s.root}>
       <div className={s.leftSide}>
         <h1>Where in the world?</h1>
       </div>
-      <Button 
-        text = "Dark Mode"
-        onClick={() => switchMode({ darkMode, setDarkMode})}
-        icon = {darkMode.value ? <Moon/> : <Sun />}
-        type = "primary"
+      <Button
+        text=""
+        onClick={() => switchMode({ darkMode, setDarkMode })}
+        icon={darkMode.value ? <Moon /> : <Sun />}
+        type="primary"
       />
-    </div>)
-}
+    </header>
+  );
+};
 
 export default Header;
