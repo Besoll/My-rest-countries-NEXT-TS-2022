@@ -1,5 +1,5 @@
 import { GetCountries } from "framework/getCountries";
-import React, { FC, ReactNode } from "react";
+import React, { ReactNode } from "react";
 import s from "./Search.module.css";
 
 interface SearchCountry {
@@ -10,7 +10,7 @@ interface SearchCountry {
   setLoading: (loading: boolean) => void;
 }
 
-const Search: FC<SearchCountry> = ({
+const Search = ({
   placeholder,
   icon,
   value,

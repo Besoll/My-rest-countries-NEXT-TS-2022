@@ -12,6 +12,13 @@ export class GetCountries {
     const response = await fetch(`https://restcountries.com/v3.1/name/${name}`),
       data = await response.json();
 
-    return data.status === 404 ? false : data;
+    return data.status === 404 ? false : data
+  }
+
+  async getCountryByRegion(region: string | string[]) {
+    const response = await fetch(`https://restcountries.com/v3.1/region/${region}`),
+      data = await response.json()
+    
+      return data.status === 404 ? false : data
   }
 }

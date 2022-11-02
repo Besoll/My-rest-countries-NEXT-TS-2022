@@ -1,5 +1,5 @@
 import s from "./Main.module.css";
-import { Loading, NotFound, Countries, Search } from "@components/index";
+import { Loading, NotFound, Countries, Search, Filter } from "@components/index";
 import { GetCountries } from "framework/getCountries";
 import { useEffect, useState } from "react";
 import { numberWithCommas } from "utils/numberWithCommas";
@@ -21,12 +21,17 @@ const Main = () => {
     <>
       <div>
         <Search
-          icon={<SearchIcon />}
+          icon={SearchIcon}
           placeholder="Search for a country..."
           setCountries={setCountries}
           setLoading={setLoading}
         />
-        <div></div>
+        <Filter
+          type={"region"}
+          value={["Africa", "America", "Asia", "Europe", "Oceania"]}
+          setCountries={setCountries}
+          setLoading={setLoading}
+        />
       </div>
 
       <main className={loading ? s.loading : s.loaded}>
