@@ -62,21 +62,23 @@ export default function CountryDetail({ countryName }: any) {
         {countryInfo !== null && (
           <>
             <CountryPage
-              name={countryInfo.name.common}
-              flag={countryInfo.flags.svg}
+              name={countryInfo["name"]["common"]}
+              flag={countryInfo["flags"]["svg"]}
               nativeLanguage={
-                [Object.values(countryInfo.languages)[0]] as unknown as string
+                [
+                  Object.values(countryInfo["languages"])[0],
+                ] as unknown as string
               }
-              population={countryInfo.population}
-              region={countryInfo.region}
-              capital={countryInfo.capital[0]}
-              subRegion={countryInfo.subregion}
-              topLevelDomain={countryInfo.tld}
-              currencies={Object.values(countryInfo.currencies)}
+              population={countryInfo["population"]}
+              region={countryInfo["region"]}
+              capital={countryInfo["capital"][0]}
+              subRegion={countryInfo["subregion"]}
+              topLevelDomain={countryInfo["tld"]}
+              currencies={Object.values(countryInfo["currencies"])}
               languages={
-                Object.values(countryInfo.languages) as unknown as string[]
+                Object.values(countryInfo["languages"]) as unknown as string[]
               }
-              borderCountries={countryInfo.borders}
+              borderCountries={countryInfo["borders"]}
             />
           </>
         )}
