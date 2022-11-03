@@ -11,23 +11,25 @@ export class GetCountries {
   async getCountriesByName(name: string | string[]) {
     const response = await fetch(`https://restcountries.com/v3.1/name/${name}`),
       data = await response.json();
-
-    return data.status === 404 ? false : data
+    return data.status === 404 ? false : data;
   }
 
   async getCountryByRegion(region: string | string[]) {
-    const response = await fetch(`https://restcountries.com/v3.1/region/${region}`),
-      data = await response.json()
-    
-      return data.status === 404 ? false : data
+    const response = await fetch(
+        `https://restcountries.com/v3.1/region/${region}`
+      ),
+      data = await response.json();
+
+    return data.status === 404 ? false : data;
   }
 
   async getCountriesByCode(country: string[]) {
-    const response = country && await fetch(
-      `https://restcountries.com/v3.1/alpha?codes=${country.join(",")}`
-      ),
-      data = await response.json()
-
-      return data
+    const response =
+        country &&
+        (await fetch(
+          `https://restcountries.com/v3.1/alpha?codes=${country.join(",")}`
+        )),
+      data = country && (await response.json());
+    return data;
   }
 }
