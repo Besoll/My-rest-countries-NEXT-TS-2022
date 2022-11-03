@@ -12,15 +12,20 @@ const NotFound = ({ returnHome }: { returnHome?: boolean }) => {
   return (
     <div className={s.root}>
         <div className="svgContainer">
-            <NotFoundIcon />
+        <Button 
+          type={"primary"}
+          icon={<NotFoundIcon />}
+          text={" "}
+          onClick={() => router.back()}
+         />
         </div>
         <h1 className={s.h1}>404 error</h1>
         <p className={s.p}>Uh oh! Looks like you got lost.</p>
-        <p className={s.p}>Go back to the homepage if you dare!</p>
+        <p className={s.p}>Go back to the homepage</p>
         <Button 
           type={"primary"}
           icon={<Back />}
-          text={"I dare! Go HOME!"}
+          text={" Go HOME!"}
           onClick={() => router.back()}
          />
     </div>
