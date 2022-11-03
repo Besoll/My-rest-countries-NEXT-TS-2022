@@ -67,7 +67,7 @@ My bonus:
 ### Links
 
 - Solution URL: [Link to solution URL here](https://www.frontendmentor.io/solutions/rest-countries-api-with-color-theme-switcher-PEPrHnrjaL)
-- Live Site URL: [Link to live site](https://countries-api-test.netlify.app/)
+- Live Site URL: [Link to live site](https://my-rest-countries-next-ts-2022-qr5n.vercel.app/)
 
 ## Author
 
