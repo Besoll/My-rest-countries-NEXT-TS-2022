@@ -37,7 +37,7 @@ export const getStaticProps = async (context: {
   };
 };
 
-export default function CountryDetail({ countryName }) {
+export default function CountryDetail({ countryName }: any) {
   const [countryInfo, setCountryInfo] = useState(null);
 
   useEffect(() => {
@@ -47,7 +47,7 @@ export default function CountryDetail({ countryName }) {
   return (
     <div className={s.container}>
       <Header />
-      <div className={s.main.info}>
+      <div className={s.main_info}>
         <div className={s.back}>
           <Link href="/" passhref>
             <Button
