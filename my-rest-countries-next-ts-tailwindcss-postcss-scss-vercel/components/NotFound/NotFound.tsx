@@ -1,6 +1,6 @@
 import { Back } from "@assets/icons";
 import { Button } from "@components/index";
-import s from "./NotFound.module.css";
+import s from "./notFound.module.css";
 import { useRouter } from "next/router";
 
 const NotFound = ({ returnHome }: { returnHome?: boolean }) => {
