@@ -1,0 +1,32 @@
+.containerTop {
+  @apply flex items-center justify-between 
+          flex-wrap gap-4 lg:gap-1 mx-0 my-6 p-4;
+}
+
+.main {
+  @apply flex flex-col items-center justify-center my-12
+            mx-auto max-w-[1400px] 2xl:max-w-[1600px];
+}
+
+.container {
+  @apply grid justify-items-center justify-center gap-5
+            lg:gap-8 h-full w-full;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 270px));
+
+  && a {
+    @apply w-full;
+    display: inherit;
+  }
+}
+
+.loading {
+  @apply grid h-full items-center;
+}
+
+.loaded {
+  @apply bg-White;
+}
+
+:global(.dark) .loaded {
+  @apply bg-Blue_Dark;
+}

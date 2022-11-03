@@ -1,5 +1,20 @@
-.root {
-  @apply bg-Blue_Light dark:bg-Grey 
-          text-White dark:text-Blue_Dark 
-          w-full h-10;
+.container {
+  background-position: calc(100% - 16px);
+  background-image: url("../../assets/icons/arrow_down_blue.svg");
+  @apply transition-all flex justify-between h-14 items-center  
+          p-4 w-[190px] rounded-md shadow-sm appearance-none 
+          bg-no-repeat bg-[length:10px_10px] md:bg-[length:13px_13px]
+           border-gray-200 border text-Blue_Dark;
+  
+  && .first {
+    @apply hidden;
+  }
+
 }
+
+
+:global(.dark) .container {
+  @apply bg-Blue_Light  text-White border-none;
+  background-image: url("../../assets/icons/arrow_down_white.svg");
+}
+

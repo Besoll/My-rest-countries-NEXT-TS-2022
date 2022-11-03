@@ -20,19 +20,33 @@
     ]
   },
   "dependencies": {
-    "next": "13.0.0",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
+    "next": "^13.0.1",
+    "node-sass": "^7.0.3",
+    "postcss-import": "^15.0.0",
+    "postcss-loader": "^7.0.1",
+    "postcss-nesting": "^10.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-redux": "^5.0.0-alpha.9",
+    "sass": "^1.55.0"
   },
   "devDependencies": {
+    "@svgr/webpack": "^6.5.1",
     "@types/node": "18.11.7",
     "@types/react": "18.0.24",
     "@types/react-dom": "18.0.8",
+    "autoprefixer": "^10.4.13",
     "eslint": "8.26.0",
     "eslint-config-next": "13.0.0",
+    "eslint-config-prettier": "^8.5.0",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
+    "postcss": "^8.4.18",
     "prettier": "2.7.1",
-    "typescript": "4.8.4"
+    "prettier-eslint": "^15.0.1",
+    "tailwindcss": "^3.2.1",
+    "typescript": "4.8.4",
+    "webpack": "^5.74.0"
   }
 }

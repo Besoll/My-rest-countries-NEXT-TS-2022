@@ -1,0 +1,8 @@
+.spinner {
+    @apply mr-2 w-16 h-16 text-gray-200 animate-spin fill-red-400;
+  }
+  
+.container {
+    @apply h-[160px] flex flex-col justify-center  md:h-full;
+}
+  

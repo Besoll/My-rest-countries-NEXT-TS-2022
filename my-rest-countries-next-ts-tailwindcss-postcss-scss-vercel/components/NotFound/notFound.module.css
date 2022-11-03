@@ -1,0 +1,19 @@
+.root {
+    @apply flex flex-col items-center 
+     fill-White_Soft text-Blue_Dark bg-White;
+
+     && svg {
+        @apply fill-White;
+    }
+}
+
+
+
+.svgContainer {
+    @apply  animate-spin;
+}
+
+:global(.dark) .root {
+    @apply fill-Blue_Light text-White bg-Blue_Dark;
+}
+  

@@ -1,0 +1,11 @@
+.root {
+    @apply text-2xl;
+
+    && h1 {
+        @apply text-2xl;
+    }
+
+    button svg {
+        @apply fill-White text-White;
+    }
+}

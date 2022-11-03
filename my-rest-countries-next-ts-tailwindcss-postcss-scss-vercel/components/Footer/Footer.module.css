@@ -1,5 +1,8 @@
 .root {
-  @apply bg-Blue_Light dark:bg-Grey 
-          text-White dark:text-Blue_Dark 
-          w-full h-10;
+  @apply bg-White_Soft shadow-sm text-Blue_Light flex items-center justify-center 
+          w-full h-auto text-center text-Small;
+}
+
+:global(.dark) .root {
+  @apply bg-Blue_Light text-White_Soft;
 }

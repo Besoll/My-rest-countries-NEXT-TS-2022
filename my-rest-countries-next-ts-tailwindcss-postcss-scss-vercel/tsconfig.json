@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": ".",
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
@@ -17,7 +17,6 @@
     "incremental": true,
     "paths": {
       "@assets/*": ["assets/*"],
-      "@components": ["components"],
       "@components/*": ["components/*"],
       "@common": ["framework/common"],
       "@common/*": ["framework/common/*"],

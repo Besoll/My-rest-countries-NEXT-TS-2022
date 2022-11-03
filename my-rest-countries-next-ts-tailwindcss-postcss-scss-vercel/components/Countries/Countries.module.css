@@ -1,0 +1,35 @@
+.container {
+    @apply bg-White dark:bg-Blue_Light rounded-lg 
+            shadow-md hover:drop-shadow-lg w-full h-full break-words;
+  }
+  
+  .CardHeader {
+    @apply flex items-center justify-between 
+            flex-wrap w-full h-[170px] bg-no-repeat 
+            bg-center bg-cover rounded-t-lg;
+  
+    && img {
+      @apply w-auto h-auto rounded-t-md;
+    }
+  }
+  
+  .CardBody {
+    @apply text-Blue_Dark p-6;
+  
+    && h1 {
+      @apply text-Big whitespace-pre-line font-Bold mb-4 break-words;
+    }
+    && li {
+      @apply mb-2;
+    }
+  }
+
+  :global(.dark) .container {
+    @apply bg-Blue_Light;
+  }
+
+  :global(.dark) .CardBody {
+    @apply text-white
+  }
+
+  
