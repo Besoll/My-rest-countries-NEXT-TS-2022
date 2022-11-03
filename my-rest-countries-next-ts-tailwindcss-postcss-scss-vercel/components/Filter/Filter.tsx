@@ -28,25 +28,27 @@ const Filter = ({
 
       setLoading(true)
 
-      country.getCountryByRegion(selectValue).then((res) => {
-        setCountries(res)
-        setTimeout(() => {
-          setLoading(false)
-        }, 500)
-      })
-
+      
       if ( selectValue === "" ) {
         country.getCountries().then((res) => {
+          setCountries(res)
+          setTimeout(() => {
+            setCountries(res);
+            setLoading(false)
+          }, 500)
+        })
+      } else {
+        country.getCountryByRegion(selectValue).then((res) => {
           setCountries(res)
           setTimeout(() => {
             setLoading(false)
           }, 500)
         })
       }
+
     }
 
   return (
-    <>
       <select 
         className={s.container}
         name={type}
@@ -66,7 +68,6 @@ const Filter = ({
           </option>
         ))}
       </select>
-    </>
   )
 }
 

@@ -1,5 +1,5 @@
 import { GetCountries } from "framework/getCountries";
-import React, { ReactNode } from "react";
+import React, { ReactNode, useState } from "react";
 import s from "./Search.module.css";
 
 interface SearchCountry {
@@ -17,6 +17,9 @@ const Search = ({
   setCountries,
   setLoading,
 }: SearchCountry) => {
+
+  const [searchValue, setSearchValue] = useState("");
+
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     let searchValue = event.target.value;
     const country = new GetCountries();

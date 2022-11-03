@@ -6,7 +6,7 @@ import { numberWithCommas } from "utils/numberWithCommas";
 import { SearchIcon } from "@assets/icons";
 
 const Main = () => {
-  const [countries, setCountries] = useState([]);
+  const [countries, setCountries] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -18,7 +18,7 @@ const Main = () => {
   }, []);
 
   return (
-    <>
+    <div>
       <div className={s.containerTop}>
         <Search
           icon={<SearchIcon />}
@@ -42,7 +42,7 @@ const Main = () => {
             ) : countries === (false as any) ? (
               <NotFound />
             ) : (
-              countries.map((country) => (
+              countries && countries.map((country) => (
                 <Countries
                   key={country.name.common}
                   flag={country.flags[0] || country.flags.svg}
@@ -56,7 +56,7 @@ const Main = () => {
           </div>
         </div>
       </main>
-    </>
+    </div>
   );
 };
 

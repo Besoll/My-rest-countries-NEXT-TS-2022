@@ -6,10 +6,12 @@
           bg-no-repeat bg-[length:10px_10px] md:bg-[length:13px_13px]
            border-gray-200 border text-Blue_Dark;
   
-  .first {
+  && .first {
     @apply hidden;
   }
+
 }
+
 
 :global(.dark) .container {
   @apply bg-Blue_Light  text-White border-none;

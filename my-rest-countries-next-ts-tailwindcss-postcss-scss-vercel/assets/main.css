@@ -61,3 +61,4 @@ input:-webkit-autofill:active {
 :global(.dark) body {
   @apply text-White bg-Blue_Dark;
 }
+

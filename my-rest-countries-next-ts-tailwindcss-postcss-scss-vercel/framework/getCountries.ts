@@ -21,4 +21,13 @@ export class GetCountries {
     
       return data.status === 404 ? false : data
   }
+
+  async getCountriesByCode(country: string[]) {
+    const response = country && await fetch(
+      `https://restcountries.com/v3.1/alpha?codes=${country.join(",")}`
+      ),
+      data = await response.json()
+
+      return data
+  }
 }
