@@ -1,0 +1,69 @@
+.container {
+  @apply text-Blue_Light bg-White lg:grid  lg:items-start;
+
+  && span {
+    @apply mr-[6px] font-Bold;
+  }
+  && h1 {
+    @apply text-xl whitespace-pre-line font-bold mb-4 break-words lg:text-2xl;
+  }
+}
+
+.back {
+  margin: 0 16px;
+  height: 5rem;
+}
+
+.subContainer_Flag {
+  @apply flex  lg:col-start-1 lg:row-start-2 lg:row-end-4 w-[375px] lg:w-[500px];
+  margin: 0 auto;
+}
+.subContainer_Details {
+  @apply lg:flex lg:justify-start lg:row-start-2;
+
+  && .subContainer_Details_1st, .subContainer_Details_2nd {
+    @apply lg:flex lg:flex-col lg:justify-center lg:ml-5;
+  }
+}
+
+.subContainer_Borders {
+  @apply lg:col-start-2 lg:row-start-3 lg:row-end-4;
+}
+
+.subContainer_Flag,
+.subContainer_Details p { 
+    @apply flex mr-[6px] mb-[10px] lg:flex-wrap;
+}
+
+.subContainer_Flag,
+.subContainer_Details ul { 
+    @apply flex mr-[6px] mb-[10px] lg:flex-wrap;
+}
+
+
+.subContainer_Flag,
+.subContainer_Details,
+.subContainer_Borders {
+  @apply p-[14px] bg-White;
+}
+
+.flag {
+  @apply h-56 bg-no-repeat bg-center bg-cover mt-[35px] mb-[40px]  lg:m-[50px_auto];
+}
+
+.boundary_Borders {
+  @apply flex flex-wrap items-center gap-2 mt-6 lg:max-w-[520px];
+  && a {
+    @apply grid w-[168px];
+  }
+}
+
+:global(.dark) .container {
+  @apply text-White bg-Blue_Dark;
+}
+
+:global(.dark) .subContainer_Flag,
+:global(.dark) .subContainer_Details,
+:global(.dark) .subContainer_Borders {
+  @apply bg-Blue_Dark;
+}

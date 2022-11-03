@@ -1,3 +1,18 @@
 .container {
-    @apply text-Blue_Light;
-}
+    @apply flex h-screen flex-col justify-between bg-White;
+  }
+  
+  .main_info {
+    @apply flex h-full flex-col items-center  justify-between ;
+  }
+
+  
+  :global(.dark) .container {
+    @apply bg-Blue_Dark;
+  }
+  
+  .back {
+    @apply flex place-self-start;
+    margin: 0 16px;
+    height: 5rem;
+  }

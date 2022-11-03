@@ -1,6 +1,6 @@
 .root {
   @apply transition-all flex justify-between
-            h-20 md:p-8 mb-5 items-center p-4 shadow-md;
+            h-24 md:p-8 mb-5 items-center p-4 shadow-md;
 
   && .leftSide {
     @apply text-Blue_Dark font-Bold text-Big;
@@ -23,8 +23,5 @@
 
   && button {
     @apply fill-yellow-300;
-    &:hover {
-      @apply animate-spin duration-700;
-    }
   }
 }

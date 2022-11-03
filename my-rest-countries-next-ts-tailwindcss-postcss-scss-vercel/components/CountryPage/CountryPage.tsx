@@ -46,80 +46,80 @@ const CountryPage = ({
   return (
     <div className={s.container}>
       <div className={s.subContainer_Flag}>
-        <Image src={flag} alt={name} width={500} height={500} />
+        {/* <Image src={flag} alt={name} width={500} height={500} /> */}
+        <img src={flag} alt={name} />
       </div>
 
       <div className={s.subContainer_Details}>
         <div className={s.subContainer_Details_1st}>
           <h1>{name}</h1>
           <p>
-            Native Language:
-            <span>{nativeLanguage}</span>
+            <span>Native Language: </span>
+            {nativeLanguage}
           </p>
           <p>
-            Population:
-            <span>{numberWithCommas(population)}</span>
+            <span>Population: </span>
+            {numberWithCommas(population)}
           </p>
           <p>
-            Region:
-            <span>{region}</span>
+            <span>Region: </span>
+            {region}
           </p>
           <p>
-            Sub Region:
-            <span>{subRegion}</span>
+            <span>Sub Region: </span>
+            {subRegion}
           </p>
           <p>
-            Capital:
-            <span>{capital}</span>
+            <span>Capital: </span>
+            {capital}
           </p>
         </div>
         <div className={s.subContainer_Details_2nd}>
-          <p>
-            Top Level Domain:
-            <span>{topLevelDomain}</span>
+        <p>
+            <span>Top Level Domain: </span>
+            {topLevelDomain}
           </p>
-          <p>
-            Currencies:
-            <span>
+          <span>
+            <ul>
+              <span>Currencies: </span>
+
               {currencies &&
                 currencies.map((currency, index) => (
                   <>
                     {currencies.length >= 0 && index < currencies.length - 1 ? (
                       <>
-                        <li key={Math.floor(Math.random() * 10 * index)}>
-                          {currency.name}
+                        <li key={Math.floor(Math.random() * 1000 * index)}>
+                          {currency.name},
                         </li>
                       </>
                     ) : (
-                      <li key={Math.floor(Math.random() * 10 * index)}>
+                      <li key={Math.floor(Math.random() * 1000 * index)}>
                         {currency.name}
                       </li>
                     )}
                   </>
                 ))}
-            </span>
-          </p>
-          <p>
-            Languages:
-            <span>
-              {languages &&
-                languages.map((language, index) => (
-                  <>
-                    {languages.length > 0 && index < languages.length - 1 ? (
-                      <>
-                        <li key={Math.floor(Math.random() * 10 * index)}>
-                          {language}
-                        </li>
-                      </>
-                    ) : (
-                      <li key={Math.floor(Math.random() * 10 * index)}>
-                        {language}
+            </ul>
+          </span>
+          <ul>
+            <span>Languages: </span>
+            {languages &&
+              languages.map((language, index) => (
+                <>
+                  {languages.length > 0 && index < languages.length - 1 ? (
+                    <>
+                      <li key={Math.floor(Math.random() * 1000 * index)}>
+                        {language},
                       </li>
-                    )}
-                  </>
-                ))}
-            </span>
-          </p>
+                    </>
+                  ) : (
+                    <li key={Math.floor(Math.random() * 1000 * index)}>
+                      {language}
+                    </li>
+                  )}
+                </>
+              ))}
+          </ul>
         </div>
       </div>
 
