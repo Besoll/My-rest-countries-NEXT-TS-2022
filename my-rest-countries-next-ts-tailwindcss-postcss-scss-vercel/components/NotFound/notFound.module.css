@@ -2,7 +2,7 @@
     @apply flex flex-col items-center 
      fill-White_Soft text-Blue_Dark bg-White;
 
-     svg {
+     && svg {
         @apply fill-White animate-spin ;
     }
 }
@@ -16,7 +16,7 @@
 :global(.dark) .root {
     @apply fill-Blue_Light text-White bg-Blue_Dark;
 
-    svg {
+    && svg {
         @apply fill-Blue_Dark animate-spin ;
     }
 }
