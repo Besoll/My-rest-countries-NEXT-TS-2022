@@ -1,12 +1,13 @@
 .container {
-  @apply text-Blue_Light bg-White lg:grid  lg:items-start;
+  @apply text-Blue_Light bg-White lg:grid lg:items-start;
+}
 
-  && span {
-    @apply mr-[6px] font-Bold;
-  }
-  && h1 {
-    @apply text-xl whitespace-pre-line font-bold mb-4 break-words lg:text-2xl;
-  }
+.container span {
+  @apply mr-[6px] font-Bold;
+}
+
+.container h1 {
+  @apply text-xl whitespace-pre-line font-bold mb-4 break-words lg:text-2xl;
 }
 
 .back {
@@ -20,10 +21,10 @@
 }
 .subContainer_Details {
   @apply lg:flex lg:justify-start lg:row-start-2;
-
-  && .subContainer_Details_1st, .subContainer_Details_2nd {
-    @apply lg:flex lg:flex-col lg:justify-center lg:ml-5;
-  }
+}
+.subContainer_Details_1st,
+.subContainer_Details_2nd {
+  @apply lg:flex lg:flex-col lg:justify-center lg:ml-5;
 }
 
 .subContainer_Borders {
@@ -31,15 +32,14 @@
 }
 
 .subContainer_Flag,
-.subContainer_Details p { 
-    @apply flex mr-[6px] mb-[10px] lg:flex-wrap;
+.subContainer_Details p {
+  @apply flex mr-[6px] mb-[10px] lg:flex-wrap;
 }
 
 .subContainer_Flag,
-.subContainer_Details ul { 
-    @apply flex mr-[6px] mb-[10px] lg:flex-wrap;
+.subContainer_Details ul {
+  @apply flex mr-[6px] mb-[10px] lg:flex-wrap;
 }
-
 
 .subContainer_Flag,
 .subContainer_Details,
@@ -53,9 +53,9 @@
 
 .boundary_Borders {
   @apply flex flex-wrap items-center gap-2 mt-6 lg:max-w-[520px];
-  && a {
-    @apply grid w-[168px];
-  }
+}
+.boundary_Borders a {
+  @apply grid w-[168px];
 }
 
 :global(.dark) .container {

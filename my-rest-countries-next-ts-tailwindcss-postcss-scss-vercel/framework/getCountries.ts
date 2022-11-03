@@ -30,6 +30,7 @@ export class GetCountries {
           `https://restcountries.com/v3.1/alpha?codes=${country.join(",")}`
         )),
       data = country && (await response.json());
+    // console.clear();
     return data;
   }
 }

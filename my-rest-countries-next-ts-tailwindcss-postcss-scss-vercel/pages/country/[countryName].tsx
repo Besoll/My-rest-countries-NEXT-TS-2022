@@ -1,6 +1,7 @@
 import s from "@assets/CountryPage.module.css";
 import { Back } from "@assets/icons";
-import { Button, CountryPage, Footer, Header } from "@components/index";
+import CountryPage from "@components/CountryPage/CountryPage";
+import { Button, Footer, Header } from "@components/index";
 import { GetCountries } from "framework/getCountries";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -49,7 +50,7 @@ export default function CountryDetail({ countryName }: any) {
       <Header />
       <div className={s.main_info}>
         <div className={s.back}>
-          <Link href="/" passhref>
+          <Link href="/">
             <Button
               text={"Back"}
               type={"secondary"}

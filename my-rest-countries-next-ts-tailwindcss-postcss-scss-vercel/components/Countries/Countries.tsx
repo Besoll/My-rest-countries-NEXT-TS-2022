@@ -1,7 +1,5 @@
 import Link from "next/link";
 import s from "./Countries.module.css";
-import Image from "next/image";
-import { Filter } from "@components/index";
 
 const Countries = ({
   flag,

@@ -75,7 +75,7 @@ const CountryPage = ({
           </p>
         </div>
         <div className={s.subContainer_Details_2nd}>
-        <p>
+          <p>
             <span>Top Level Domain: </span>
             {topLevelDomain}
           </p>
@@ -93,7 +93,7 @@ const CountryPage = ({
                         </li>
                       </>
                     ) : (
-                      <li key={Math.floor(Math.random() * 1000 * index)}>
+                      <li key={Math.floor(Math.random() * 1500 * index)}>
                         {currency.name}
                       </li>
                     )}
@@ -130,6 +130,7 @@ const CountryPage = ({
             {borderCountries &&
               borderCountryName &&
               borderCountryName.map((borderCountry) => {
+                // eslint-disable-next-line react/jsx-key
                 <Link href={`/country/${borderCountry.name.common}`}>
                   <Button
                     type="secondary"
